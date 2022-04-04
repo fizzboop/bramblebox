@@ -1,0 +1,22 @@
+type Recipe {
+  id: ID
+  createdAt: Int
+  title: String!
+  description: String!
+  imageURL: String
+  servings: Number
+  ingredients: [Ingredient!]!
+  steps: [RecipeStep!]!
+  category: [String]
+  author: String
+}
+
+type Ingredient {
+  name: String!
+  amount: String!
+}
+
+type RecipeStep {
+  step: Int!
+  description: String!
+}
